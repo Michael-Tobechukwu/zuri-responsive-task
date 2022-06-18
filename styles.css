@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(248, 122, 143);
+  max-width: 1440px;
+  height: 800px;
+  background-image: url("images/bg-intro-desktop.png");
+  font-family: "Poppins", sans-serif;
+}
+
+input,
+form #button {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.text-box {
+  margin-top: 80px;
+  width: 500px;
+  margin-left: 200px;
+}
+
+.tryfree:hover {
+  cursor: pointer;
+}
+
+.tryfree:hover .tryfree::after {
+  content: "222";
+}
+
+.text-box h1 {
+  color: #fff;
+  font-size: 3em;
+}
+
+.text-box p {
+  color: #fff;
+  margin-top: 25px;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+
+.form {
+  margin-top: 80px;
+  margin-right: 100px;
+  width: 500px;
+}
+
+form {
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 1px 8px 1px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+form input {
+  margin: 15px 0;
+  padding: 15px 30px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  border: hsl(246, 25%, 77%) 1px solid;
+  border-radius: 5px;
+}
+
+form input:focus {
+  outline: none;
+  border: #000 1px solid;
+}
+
+form input:invalid form input::after {
+  content: "First name cannot be empty";
+  border: tomato 2px solid;
+}
+
+form #button {
+  margin: 10px auto;
+  padding: 15px 20%;
+  text-align: center;
+  border: none;
+  background: hsl(154, 59%, 51%);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 4px 1px rgba(11, 77, 9, 0.3);
+  width: 100%;
+  font-size: 16px;
+}
+
+form #button:hover {
+  cursor: pointer;
+  background: hsl(154, 70%, 60%);
+}
+
+form #button:hover form input ::after {
+  content: "First name cannot be empty."; /*url("images/icon-error.svg");*/
+}
+
+form p {
+  font-weight: bold;
+  color: hsl(246, 25%, 77%);
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+form p span {
+  color: hsl(0, 100%, 74%);
+}
+
+.tryfree {
+  background: hsl(248, 32%, 49%);
+  border-radius: 10px;
+  padding: 20px 50px;
+  margin: 20px auto;
+  box-shadow: 1px 5px 1px hsl(249, 10%, 26%);
+}
+
+.tryfree p {
+  color: #fff;
+  text-align: center;
+}
+
+.tryfree p span {
+  color: #fff;
+  font-weight: bold;
+}
+
+/*Media queries*/
+@media (max-width: 375px) {
+  body {
+    background-image: url("images/bg-intro-mobile.png");
+    max-width: 375px;
+  }
+
+  .wrapper {
+    padding: 0 20px;
+    display: block;
+    max-width: 375px;
+    height: 1000px;
+    margin: 100px auto;
+  }
+
+  .text-box {
+    width: 85%;
+    margin: 30px auto 10px auto;
+    text-align: center;
+  }
+
+  .text-box h1 {
+    font-size: 25px;
+  }
+
+  .tryfree {
+    padding: 20px 70px;
+    margin-top: 50px;
+  }
+
+  .tryfree p {
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+  .form {
+    margin: 80px auto 0 auto;
+    width: 100%;
+  }
+
+  form {
+    padding: 20px 25px;
+    margin-top: 25px;
+  }
+
+  form input {
+    margin: 10px 0;
+    padding: 15px 30px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  form #button {
+    margin: 10px auto;
+    padding: 20px 50px;
+    width: 100%;
+    font-weight: 300;
+  }
+
+  form p {
+    font-size: 11px;
+    text-align: center;
+  }
+}
