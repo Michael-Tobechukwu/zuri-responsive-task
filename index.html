@@ -9,8 +9,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script defer src="script.js"></script>
     <title>Zuri Responsive Form | Michael Tobechukwu Nwokike</title>
+
+     
   </head>
 
   <body>
@@ -27,50 +28,61 @@
         <div class="tryfree">
           <p><span>Try it free 7days</span> then $20/mo. thereafter</p>
         </div>
-        <form id="main-form">
+        <form id="mainform">
           <div class="first-name">
             <input
               type="text"
-              id="first-name"
+              id="firstname"
               name="first-name"
               placeholder="First Name"
-              required
             />
+            <span id="firstNameImg"><img src="images/icon-error.svg" /></span>
           </div>
+
+          <span id="firstnameerror"></span>
 
           <div class="last-name">
             <input
               type="text"
-              id="Last-name"
+              id="Lastname"
               name="Last-name"
               placeholder="Last Name"
-              required
-              data-error="Last Name cannot be empty"
             />
+            <span id="lastNameImg"><img src="images/icon-error.svg" /></span>
           </div>
+
+          <span id="lastnameerror"></span>
 
           <div class="email">
             <input
               type="email"
               id="email"
               name="email"
+              value=""
               placeholder="Email Address"
-              required
-              data-error="Looks like this is not an email"
             />
+            <span id="emailImg"><img src="images/icon-error.svg" /></span>
           </div>
+
+          <span id="emailError"></span>
+
           <div class="password">
             <input
               type="password"
               id="password"
               name="password"
               placeholder="Password"
-              required
-              data-error="Password cannot be empty"
             />
+            <span id="passwordImg"> <img src="images/icon-error.svg" /></span>
           </div>
 
-          <button id="button">CLAIM YOUR FREE TRIAL</button>
+          <span id="passworderror"></span>
+
+          <div>
+            <button id="button" onclick="validateData()">
+              CLAIM YOUR FREE TRIAL
+            </button>
+          </div>
 
           <p>
             By clicking the button, you are agreeing to our
@@ -79,7 +91,6 @@
         </form>
       </div>
     </div>
-
-
+    <script src="main.js"></script>
   </body>
 </html>
