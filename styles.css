@@ -25,7 +25,7 @@ form #button {
 }
 
 .text-box {
-  margin-top: 80px;
+  margin-top: 70px;
   width: 500px;
   margin-left: 200px;
 }
@@ -51,7 +51,7 @@ form #button {
 }
 
 .form {
-  margin-top: 60px;
+  margin-top: 80px;
   margin-right: 100px;
   width: 500px;
 }
@@ -80,13 +80,8 @@ form input:focus {
   border: #000 1px solid;
 }
 
-form input:invalid form input::after {
-  content: "First name cannot be empty";
-  border: tomato 2px solid;
-}
-
 form #button {
-  margin: 10px auto;
+  margin: 20px auto 10px auto;
   padding: 15px 20%;
   text-align: center;
   border: none;
@@ -103,16 +98,12 @@ form #button:hover {
   background: hsl(154, 70%, 60%);
 }
 
-form #button:hover form input ::after {
-  content: "First name cannot be empty."; /*url("images/icon-error.svg");*/
-}
-
 form p {
   font-weight: bold;
   color: hsl(246, 25%, 77%);
   font-size: 12px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 form p span {
@@ -135,6 +126,35 @@ form p span {
 .tryfree p span {
   color: #fff;
   font-weight: bold;
+}
+
+#firstnameerror,
+#lastnameerror,
+#emailError,
+#passworderror {
+  margin-left: 60%;
+  margin-bottom: 10%;
+  color: tomato;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.first-name,
+.last-name,
+.email,
+.password {
+  position: relative;
+}
+
+#firstNameImg,
+#lastNameImg,
+#emailImg,
+#passwordImg {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  display: none;
 }
 
 /*Media queries*/
@@ -190,8 +210,7 @@ form p span {
     font-size: 14px;
   }
   form #button {
-    margin: 10px auto;
-    padding: 20px 50px;
+    padding: 20px 30px;
     width: 100%;
     font-weight: 300;
   }
