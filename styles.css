@@ -30,14 +30,6 @@ form #button {
   margin-left: 200px;
 }
 
-.tryfree:hover {
-  cursor: pointer;
-}
-
-.tryfree:hover .tryfree::after {
-  content: "222";
-}
-
 .text-box h1 {
   color: #fff;
   font-size: 3em;
